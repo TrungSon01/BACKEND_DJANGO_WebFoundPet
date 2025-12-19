@@ -26,8 +26,8 @@ SECRET_KEY = 'django-insecure-ofqoevf)5^ov46h4@a1$x#d2=kgkx*29()1093@pm-(j01!xc7
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["https://backend-nestjs-webfoundpet.onrender.com",
-"backend-django-webfoundpet.onrender.com", "https://frontend-react-web-found-pet.vercel.app",
+ALLOWED_HOSTS = ["backend-nestjs-webfoundpet.onrender.com",
+"backend-django-webfoundpet.onrender.com", "frontend-react-web-found-pet.vercel.app",
 "localhost", "127.0.0.1"]
 
 # Application definition
