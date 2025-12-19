@@ -26,7 +26,9 @@ SECRET_KEY = 'django-insecure-ofqoevf)5^ov46h4@a1$x#d2=kgkx*29()1093@pm-(j01!xc7
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*", "backend-django-webfoundpet.onrender.com", "localhost", "127.0.0.1"]
+ALLOWED_HOSTS = ["https://backend-nestjs-webfoundpet.onrender.com",
+"backend-django-webfoundpet.onrender.com", "https://frontend-react-web-found-pet.vercel.app",
+"localhost", "127.0.0.1"]
 
 # Application definition
 
@@ -133,9 +135,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
-]
+
+# Chỉ thêm vào STATICFILES_DIRS nếu folder tồn tại
+static_dir = os.path.join(BASE_DIR, 'static')
+STATICFILES_DIRS = [static_dir] if os.path.isdir(static_dir) else []
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
