@@ -1,2 +1,2 @@
-release: python manage.py migrate && python manage.py collectstatic --noinput
-web: daphne -b 0.0.0.0 -p $PORT MyProject.asgi:application
+release: cd MyProject && python manage.py migrate && python manage.py collectstatic --noinput
+web: cd MyProject && daphne -b 0.0.0.0 -p $PORT MyProject.asgi:application

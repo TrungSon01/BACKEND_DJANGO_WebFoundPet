@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-ofqoevf)5^ov46h4@a1$x#d2=kgkx*29()1093@pm-(j01!xc7
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["*", "backend-django-webfoundpet.onrender.com", "localhost", "127.0.0.1"]
 
 # Application definition
 
@@ -145,7 +145,22 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-CORS_ALLOW_ALL_ORIGINS = True
+# CORS Settings - Allow từ frontend domains
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:5173",
+    "http://localhost:3000",
+    "https://frontend-react-web-found-pet.vercel.app",
+    "https://backend-django-webfoundpet.onrender.com",
+    "https://backend-nestjs-webfoundpet.onrender.com",
+]
+
+CSRF_TRUSTED_ORIGINS = [
+    "http://localhost:5173",
+    "http://localhost:3000", 
+    "https://backend-nestjs-webfoundpet.onrender.com",
+    "https://frontend-react-web-found-pet.vercel.app",
+    "https://backend-django-webfoundpet.onrender.com",
+]
 
 
 REST_FRAMEWORK = {
